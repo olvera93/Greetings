@@ -47,24 +47,58 @@ struct MessagesView: View {
     ]
     
     var body: some View {
-        ForEach(messages, content: { dataItem in
-            
-            TextView(text: dataItem.text, color: dataItem.color)
-        })
+        VStack(alignment: .leading) {
+            ForEach(messages, content: { dataItem in
+                
+                TextView(text: dataItem.text, color: dataItem.color)
+            })
+        }.padding()
     }
 }
 
 
 struct TitleView: View {
+    
+    @State var isRotated: Bool = false
+    @State var captionIndex: Int = 0
+    
+    let caption: [String] = [
+        "Exploring IOS 16 programming",
+        "Learning how to bake",
+        "Programming recipes",
+        "A quest for knowledge"
+    ]
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 0.0) {
-            Text("Greetings")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+        HStack {
+            VStack(alignment: .leading, spacing: 0.0) {
+                Text("Greetings")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Text(caption[captionIndex])
+                    .font(.headline)
+                    .fontWeight(.thin)
+            }.padding()
+                .onTapGesture {
+                    captionIndex = Int.random(in: 0..<caption.count)
+                }
             
-            Text("Exploring IOS 16 programming")
-                .font(.headline)
-                .fontWeight(.thin)
+            Spacer()
+            
+            Circle()
+                .strokeBorder(AngularGradient(gradient: Gradient(
+                    colors: [
+                        .pink, .purple, .blue, .orange, .yellow]
+                ), center: .center, angle: .zero),
+                lineWidth: 15)
+                .rotationEffect(isRotated ? .zero : .degrees(360))
+                .frame(maxWidth: 70, maxHeight: 70)
+                .onTapGesture {
+                    withAnimation(Animation.spring()) {
+                        isRotated.toggle()
+                    }
+                }
         }.padding()
     }
 }
