@@ -38,11 +38,11 @@ struct ContentView: View {
 
 struct MessagesView: View {
     let messages = [
-        DataItemModel(text: "Hello there!", color: .green),
-        DataItemModel(text: "Welcome to Swift programming", color: .gray),
-        DataItemModel(text: "Are you ready to,", color: .yellow),
-        DataItemModel(text: "start exploring?", color: .red),
-        DataItemModel(text: "Boom.", color: .purple)
+        DataItemModel(text: "Hello there!", color: Color("green")),
+        DataItemModel(text: "Welcome to Swift programming", color: Color("gray")),
+        DataItemModel(text: "Are you ready to,", color: Color("yellow")),
+        DataItemModel(text: "start exploring?", color: Color("red")),
+        DataItemModel(text: "Boom.", color: Color("purple"))
         
     ]
     
@@ -106,6 +106,7 @@ struct TitleView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        ContentView().preferredColorScheme(.dark)
     }
 }
 
@@ -144,7 +145,7 @@ struct TextView: View {
 struct BackgroundView: View {
     var body: some View {
         
-        LinearGradient(colors: [.blue, Color(red: 139/255, green: 80/255, blue: 240/255)], startPoint: .topLeading, endPoint: .bottomLeading)
+        LinearGradient(colors: [Color("blue"), Color("blue2")], startPoint: .topLeading, endPoint: .bottomLeading)
             .opacity(0.3)
             .ignoresSafeArea()
     }
