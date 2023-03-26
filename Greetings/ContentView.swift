@@ -7,13 +7,18 @@
 
 import SwiftUI
 
+/// This is the data model of the messages
+/// that will appear in the app.
+/// It contains a text string and a color.
+/// Moreover it inherits from the Identifiable protocol.
 struct DataItemModel: Identifiable {
     var id = UUID()
-    let text: String
+    let text: LocalizedStringKey
     let color: Color
     
 }
 
+/// This is the main view of the Greetings app.
 struct ContentView: View {
     
     var body: some View {
@@ -36,13 +41,16 @@ struct ContentView: View {
     }
 }
 
+/// This is a view that contains
+/// a list of messages that change colors
+/// randomly upon being clicked.
 struct MessagesView: View {
     let messages = [
-        DataItemModel(text: "Hello there!", color: Color("green")),
-        DataItemModel(text: "Welcome to Swift programming", color: Color("gray")),
-        DataItemModel(text: "Are you ready to,", color: Color("yellow")),
-        DataItemModel(text: "start exploring?", color: Color("red")),
-        DataItemModel(text: "Boom.", color: Color("purple"))
+        DataItemModel(text: LocalizedStringKey("Hello there!"), color: Color("green")),
+        DataItemModel(text: LocalizedStringKey("Welcome to Swift programming"), color: Color("gray")),
+        DataItemModel(text: LocalizedStringKey("Are you ready to,"), color: Color("yellow")),
+        DataItemModel(text: LocalizedStringKey("start exploring?"), color: Color("red")),
+        DataItemModel(text: LocalizedStringKey("Boom."), color: Color("purple"))
         
     ]
     
@@ -57,22 +65,24 @@ struct MessagesView: View {
 }
 
 
+/// This contain the App title and a randomly changing caption
+/// upon tapping the caption and a colorful circle that rotates on tap.
 struct TitleView: View {
     
     @State var isRotated: Bool = false
     @State var captionIndex: Int = 0
     
-    let caption: [String] = [
-        "Exploring IOS 16 programming",
-        "Learning how to bake",
-        "Programming recipes",
-        "A quest for knowledge"
+    let caption: [LocalizedStringKey] = [
+        LocalizedStringKey("Exploring IOS 16 programming"),
+        LocalizedStringKey("Learning how to bake"),
+        LocalizedStringKey("Programming recipes"),
+        LocalizedStringKey("A quest for knowledge")
     ]
     
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 0.0) {
-                Text("Greetings")
+                Text(LocalizedStringKey("Greetings"))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
@@ -110,9 +120,11 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+/// This is the text view in the app whose colors can change randomly
+/// after being tapped.
 struct TextView: View {
     
-    let text: String
+    let text: LocalizedStringKey
     @State var color: Color
     
      let colors: [Color] = [
@@ -141,7 +153,7 @@ struct TextView: View {
     }
 }
 
-
+/// This is the background view which contains a linear gradient.
 struct BackgroundView: View {
     var body: some View {
         

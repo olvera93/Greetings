@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Greetings
+
+  Created by Gonzalo Olvera Monroy on 26/03/23.
+  
+*/
+
+"Greetings" = "Saludos";
+"Exploring IOS 16 programming" = "Explorando la programación de IOS 15";
+"Learning how to bake" = "Aprendiendo a hornear";
+"Programming recipes" = "Recetas de programación";
+"A request for knowledge" = "Una búsqueda de conocimiento";
+"Hello there!" = "Hola!";
+"Welcome to Swift programming" = "Bienvenido a la programación Swift";
+"Are you ready to," = "Estas listo para,";
+"start exploring?" = "comenzar a explorar?";
+"Boom" = "Auge";
