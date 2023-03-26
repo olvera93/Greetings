@@ -21,6 +21,7 @@
 		2842E63729D0DAA700A9D788 /* DataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842E63629D0DAA700A9D788 /* DataItemModel.swift */; };
 		2842E63B29D0DC5D00A9D788 /* LandscapeGreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842E63A29D0DC5D00A9D788 /* LandscapeGreetingsView.swift */; };
 		2842E63D29D0E1E100A9D788 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842E63C29D0E1E100A9D788 /* MainView.swift */; };
+		2842E63F29D0E51E00A9D788 /* LanguageOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842E63E29D0E51E00A9D788 /* LanguageOptionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		2842E63629D0DAA700A9D788 /* DataItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItemModel.swift; sourceTree = "<group>"; };
 		2842E63A29D0DC5D00A9D788 /* LandscapeGreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeGreetingsView.swift; sourceTree = "<group>"; };
 		2842E63C29D0E1E100A9D788 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2842E63E29D0E51E00A9D788 /* LanguageOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageOptionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2842E63029D0D91700A9D788 /* MessagesView.swift */,
 				2842E62C29D0D88700A9D788 /* BackgroundView.swift */,
 				2842E63C29D0E1E100A9D788 /* MainView.swift */,
+				2842E63E29D0E51E00A9D788 /* LanguageOptionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				2842E63729D0DAA700A9D788 /* DataItemModel.swift in Sources */,
 				2842E63D29D0E1E100A9D788 /* MainView.swift in Sources */,
 				2842E63129D0D91700A9D788 /* MessagesView.swift in Sources */,
+				2842E63F29D0E51E00A9D788 /* LanguageOptionsView.swift in Sources */,
 				2842E62D29D0D88700A9D788 /* BackgroundView.swift in Sources */,
 				2836F0A929CBA07E00581341 /* GreetingsView.swift in Sources */,
 				2842E63529D0D9E000A9D788 /* TextView.swift in Sources */,

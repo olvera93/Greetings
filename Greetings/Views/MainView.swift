@@ -15,19 +15,36 @@ struct MainView: View {
     @Environment(\.verticalSizeClass)
     var verticalSizeClass
     
+    @Binding var language: String
+    @Binding var layoutDirectionString: String
+    
     var body: some View {
         // Portrait mode ?
         if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            GreetingsView()
+            NavigationStack {
+                GreetingsView()
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            LanguageOptionsView(language: $language, layoutDirectionString: $layoutDirectionString)
+                        }
+                    }
+            }
         } else {
             // Landscape mode ?
-            LandscapeGreetingsView()
+            NavigationStack {
+                LandscapeGreetingsView()
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            LanguageOptionsView(language: $language, layoutDirectionString: $layoutDirectionString)
+                        }
+                    }
+            }
         }
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(language: .constant("en"), layoutDirectionString: .constant(LEFT_TO_RIGHT))
     }
 }
