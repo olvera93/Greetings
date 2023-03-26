@@ -11,8 +11,6 @@ struct LanguageOptionsView: View {
     
     @Binding var language: String
     @Binding var layoutDirectionString: String
-
-    //@Binding var layoutDirection: LayoutDirection
     
     var body: some View {
         Image(systemName: "gearshape.fill")
